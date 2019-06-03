@@ -10,7 +10,7 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/number', (req, res, next) => {
-    res.send({num: 50});
+    res.send({number: 50});
 })
 
 app.listen(PORT, () => {console.log('Server is running on port ' + PORT)})

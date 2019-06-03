@@ -1,38 +1,39 @@
-import React, { Component } from 'react'
-import path from '../config';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchNumber } from "../redux/actions/numberActions";
 
-export default class Home extends Component {
-    constructor (props) {
-        super(props)
-        this.state = {num: 1};
-        this.handleDec = this.handleDec.bind(this);
-        this.handleInc = this.handleInc.bind(this);
-        this.handleFetch = this.handleFetch.bind(this);
-    }
-    
-    handleDec() {
-        this.setState({num: this.state.num - 1});
-    }
+class Home extends Component {
 
-    handleInc() {
-        this.setState({num: this.state.num + 1});
-    }
+  handleDec() {
+  }
 
-    handleFetch() {
-        fetch(path + '/number')
-            .then((response) => response.json())
-            .then((num) => this.setState(num))
-            .catch((err) => console.log(err))
-        }
+  handleInc() {
+  }
 
-    render() {
-        return (
-            <div className="Home">
-                <p>{this.state.num}</p>
-                <button onClick={this.handleDec}>Decrease</button>
-                <button onClick={this.handleInc}>Increase</button>
-                <p><button onClick={this.handleFetch}>Fetch number from server</button></p>
-            </div>
-        )
-    }
+  handleFetch = () => {
+      this.props.fetchNumber();
+  }
+
+  render() {
+      console.log(this.props)
+    return (
+      <div className="Home">
+        <p>{this.props.number}</p>
+        <button onClick={() => {}}>Decrease</button>
+        <button onClick={() => {}}>Increase</button>
+        <p>
+          <button onClick={this.handleFetch}>Fetch number from server</button>
+        </p>
+      </div>
+    );
+  }
 }
+
+const mapStateToProps = state => ({
+    number: state.numbers.number,
+});
+
+export default connect(
+  mapStateToProps,
+  {fetchNumber}
+)(Home);
