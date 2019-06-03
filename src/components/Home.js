@@ -1,10 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+
 import {
   fetchNumber,
   increase,
   decrease
 } from "../redux/actions/numberActions";
+import {HomeContainer} from './styled';
+import Button from '../common/Button/Button';
 
 class Home extends Component {
   handleDec = () => {
@@ -20,16 +23,15 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.props);
     return (
-      <div className="Home">
+      <HomeContainer className="Home">
         <p>{this.props.number}</p>
         <button onClick={this.handleDec}>Decrease</button>
         <button onClick={this.handleInc}>Increase</button>
         <p>
           <button onClick={this.handleFetch}>Fetch number from server</button>
         </p>
-      </div>
+      </HomeContainer>
     );
   }
 }

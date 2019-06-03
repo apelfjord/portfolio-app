@@ -5,10 +5,6 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res, next) => {
-    res.send('Hi!')
-})
-
 app.get('/number', (req, res, next) => {
     res.send({number: 50});
 })

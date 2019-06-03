@@ -24,7 +24,6 @@ export const increase = () => dispatch => {
 }
 
 export const decrease = () => dispatch => {
-    console.log('ACtions')
     dispatch({
         type: HANDLEDECREASE,
         payload: 1,
