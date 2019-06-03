@@ -1,26 +1,31 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { fetchNumber } from "../redux/actions/numberActions";
+import {
+  fetchNumber,
+  increase,
+  decrease
+} from "../redux/actions/numberActions";
 
 class Home extends Component {
+  handleDec = () => {
+    this.props.decrease();
+  };
 
-  handleDec() {
-  }
-
-  handleInc() {
-  }
+  handleInc = () => {
+    this.props.increase();
+  };
 
   handleFetch = () => {
-      this.props.fetchNumber();
-  }
+    this.props.fetchNumber();
+  };
 
   render() {
-      console.log(this.props)
+    console.log(this.props);
     return (
       <div className="Home">
         <p>{this.props.number}</p>
-        <button onClick={() => {}}>Decrease</button>
-        <button onClick={() => {}}>Increase</button>
+        <button onClick={this.handleDec}>Decrease</button>
+        <button onClick={this.handleInc}>Increase</button>
         <p>
           <button onClick={this.handleFetch}>Fetch number from server</button>
         </p>
@@ -30,10 +35,10 @@ class Home extends Component {
 }
 
 const mapStateToProps = state => ({
-    number: state.numbers.number,
+  number: state.numbers.number
 });
 
 export default connect(
   mapStateToProps,
-  {fetchNumber}
+  { fetchNumber, increase, decrease }
 )(Home);

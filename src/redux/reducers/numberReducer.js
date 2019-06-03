@@ -11,11 +11,20 @@ const initalState = {
 export default function(state = initalState, action) {
   switch (action.type) {
     case FETCH_DATA_FROM_SERVER:
-    console.log('reducer ...')
-        return {
-            ...state,
-            number: action.payload,
-        }
+      return {
+        ...state,
+        number: action.payload
+      };
+    case HANDLEINCREASE:
+      return {
+        ...state,
+        number: state.number + action.payload
+      };
+    case HANDLEDECREASE:
+      return {
+        ...state,
+        number: state.number - action.payload
+      };
     default:
       return state;
   }
