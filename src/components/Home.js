@@ -26,10 +26,10 @@ class Home extends Component {
     return (
       <HomeContainer className="Home">
         <p>{this.props.number}</p>
-        <button onClick={this.handleDec}>Decrease</button>
-        <button onClick={this.handleInc}>Increase</button>
+        <Button onClick={this.handleDec} title='Decrease'/>
+        <Button onClick={this.handleInc} title='Increase'/>
         <p>
-          <button onClick={this.handleFetch}>Fetch number from server</button>
+          <Button onClick={this.handleFetch} title='Fetch number from server'/>
         </p>
       </HomeContainer>
     );
