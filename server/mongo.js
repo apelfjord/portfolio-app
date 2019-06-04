@@ -3,8 +3,6 @@ const util = require('util');
 const url = "mongodb://localhost:27017";
 
 const mockDb = require("./mockdata/mock.json");
-const mockDbJson = JSON.stringify(mockDb);
-const mockDbObj = JSON.parse(mockDbJson);
 const dbname = "mockdata";
 
 const client = new MongoClient(url);
@@ -27,7 +25,7 @@ client.connect(err => {
 
 const insertDocuments = (db, cb) => {
   const collection = db.collection("data");
-  collection.insertMany(mockDbObj, (err, result) => {
+  collection.insertMany(mockDb, (err, result) => {
     console.log("Inserted mock data into the collection");
     cb(result);
   });
