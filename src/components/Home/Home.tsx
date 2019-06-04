@@ -5,9 +5,9 @@ import {
   fetchNumber,
   increase,
   decrease
-} from "../redux/actions/numberActions";
+} from "../../redux/actions/numberActions";
 import {HomeContainer} from './styled';
-import Button from '../common/Button/Button';
+import Button from '../../common/Button/Button';
 
 type OwnProps = {
   number: number,

@@ -3,7 +3,7 @@ import {Provider} from 'react-redux';
  
 import {AppContainer, AppMain} from './styled';
 import store from './redux/store'
-import Home from './components/Home'
+import Home from './components/Home/Home'
 import Header from './layout/Header'
 import Footer from './layout/Footer';
 

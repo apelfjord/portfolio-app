@@ -7,6 +7,7 @@
     "@types/react-redux": "^7.0.9",
     "concurrently": "^4.1.0",
     "cors": "^2.8.5",
+    "create-reactjs-component": "^1.0.7",
     "express": "^4.17.1",
     "nodemon": "^1.19.1",
     "react": "^16.8.6",
@@ -21,6 +22,7 @@
   "scripts": {
     "start": "concurrently \"react-scripts start\" \"npm run server\"",
     "server": "nodemon ./server",
+    "create":  "create-reactjs-component",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
