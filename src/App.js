@@ -1,8 +1,8 @@
 import React from 'react';
 import {Provider} from 'react-redux';
  
+import {AppContainer, AppMain} from './styled';
 import store from './redux/store'
-import './App.css';
 import Home from './components/Home'
 import Header from './layout/Header'
 import Footer from './layout/Footer';
@@ -10,14 +10,14 @@ import Footer from './layout/Footer';
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <AppContainer>
         <Header/>
-        <div className="App-main">
+        <AppMain>
           Hej från App.js
           <Home />
-        </div>
+        </AppMain>
         <Footer/>
-      </div>
+      </AppContainer>
     </Provider>
   );
 }

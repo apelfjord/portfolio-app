@@ -5,7 +5,7 @@ This is a boilerplate portfolio app that can be modified to fit the users needs
 
 ## Tech
 
-Uses React, Redux, Express and MongoDB. Written in JavaScript. 
+Uses React.js, Redux, Express and MongoDB. Written in JavaScript. 
 
 ## Functionality
 

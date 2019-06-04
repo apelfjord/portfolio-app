@@ -9,7 +9,14 @@ import {
 import {HomeContainer} from './styled';
 import Button from '../common/Button/Button';
 
-class Home extends Component {
+type OwnProps = {
+  number: number,
+  decrease(): void,
+  increase(): void,
+  fetchNumber(): void,
+};
+
+class Home extends Component<OwnProps> {
   handleDec = () => {
     this.props.decrease();
   };
@@ -36,7 +43,7 @@ class Home extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state: { numbers: { number: any; }; }) => ({
   number: state.numbers.number
 });
 

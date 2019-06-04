@@ -2,7 +2,12 @@ import React from 'react'
 
 import {ButtonContainer} from './styled'
 
-export default class Button extends React.Component {
+type OwnProps = {
+    onClick(): void,
+    title: String,
+}
+
+export default class Button extends React.Component<OwnProps> {
 
     onClick = () => {
         this.props.onClick()
