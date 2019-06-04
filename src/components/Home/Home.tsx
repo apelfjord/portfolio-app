@@ -6,14 +6,17 @@ import {
   increase,
   decrease
 } from "../../redux/actions/numberActions";
-import {HomeContainer} from './styled';
-import Button from '../../common/Button/Button';
+import { getContent } from "../../redux/actions/contentActions";
+import { HomeContainer } from "./styled";
+import Button from "../../common/Button/Button";
 
 type OwnProps = {
-  number: number,
-  decrease(): void,
-  increase(): void,
-  fetchNumber(): void,
+  number: number;
+  content: object,
+  decrease(): void;
+  increase(): void;
+  fetchNumber(): void;
+  getContent(): void;
 };
 
 class Home extends Component<OwnProps> {
@@ -29,25 +32,39 @@ class Home extends Component<OwnProps> {
     this.props.fetchNumber();
   };
 
+  handleDb = () => {
+    this.props.getContent();
+  };
+
   render() {
     return (
       <HomeContainer className="Home">
         <p>{this.props.number}</p>
-        <Button onClick={this.handleDec} title='Decrease'/>
-        <Button onClick={this.handleInc} title='Increase'/>
+        <Button onClick={this.handleDec} title="Decrease" />
+        <Button onClick={this.handleInc} title="Increase" />
         <p>
-          <Button onClick={this.handleFetch} title='Fetch number from server'/>
+          <Button onClick={this.handleFetch} title="Fetch number from server" />
+        </p>
+        <Button onClick={this.handleDb} title="Fetch db to page" />
+        <p>
+          {JSON.stringify(this.props.content)}
         </p>
       </HomeContainer>
     );
   }
 }
 
-const mapStateToProps = (state: { numbers: { number: any; }; }) => ({
-  number: state.numbers.number
+const mapStateToProps = (state: any) => ({
+  number: state.numbers.number,
+  content: state.content.content
 });
 
 export default connect(
   mapStateToProps,
-  { fetchNumber, increase, decrease }
+  {
+    fetchNumber,
+    increase,
+    decrease,
+    getContent
+  }
 )(Home);

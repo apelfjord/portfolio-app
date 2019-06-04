@@ -8,7 +8,6 @@ const dbPath = require(mongo.dbPath);
 const app = express();
 let data = {};
 
-
 app.use(cors());
 
 app.get("/number", (req, res, next) => {
@@ -16,13 +15,17 @@ app.get("/number", (req, res, next) => {
 });
 
 app.get("/mongo", (req, res, next) => {
-    const dbName = "data";
-    const client = new MongoClient(mongo.url);
-    
-    client.connect(err => {
-        console.log("Connected to mongo server!");
-        
+  const dbName = "data";
+  const client = new MongoClient(mongo.url);
+
+  client.connect(err => {
+    console.log("Connected to mongo server!");
+
     const db = client.db(dbName);
+
+    // TODO: This endpoint is copying the data from a file and then deletes
+    //       the same data instantly. Before deployment, make sure the strip 
+    //       this function from all creating/deleting-actions before deployment
 
     fetchContent(db, () => {
       db.collection("data")
@@ -44,7 +47,7 @@ app.get("/mongo", (req, res, next) => {
     });
   };
 
-  res.send(data)
+  res.send({content: data});
 });
 
 app.listen(PORT, () => {
