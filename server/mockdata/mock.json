@@ -1,0 +1,50 @@
+[
+  {
+    "portfolio": {
+      "userName": "JohnDoe",
+      "password": "childrensName",
+      "content": {
+        "title": "My Page",
+        "tags": ["Producer", "Artist", "Photographer", "Traveler"],
+        "logoUrl": "http://lorempicsum.com",
+        "sections": [
+          {
+            "id": 2348782735,
+            "title": "Albums",
+            "content": "lorem ipsum dolor",
+            "elements": [
+              {
+                "id": 214135676,
+                "title": "Best song ever",
+                "type": "audio",
+                "URL": "http://spotify.com",
+                "content": "Wrote this in my bathtub"
+              }
+            ]
+          },
+          {
+            "id": 87957893,
+            "title": "Photos",
+            "content": "lorem ipsum dolor",
+            "elements": [
+              {
+                "id": 658595,
+                "title": "Me posing with an ostrich",
+                "type": "image",
+                "URL": "http://lorempicsum.com",
+                "content": "From my dark period"
+              },
+              {
+                "id": 75500678,
+                "title": "Me getting married to the same ostrich",
+                "type": "image",
+                "URL": "http://lorempicsum.com",
+                "content": "From my darker period"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]
