@@ -3,7 +3,7 @@ import { centerWithMenu } from "../../layout/spec";
 
 export const HomeContainer = styled.div`
   background-color: #282c34;
-  min-width: 100%;
+  min-width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
