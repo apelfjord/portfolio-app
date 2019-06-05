@@ -5,9 +5,15 @@ type OwnProps = {
   iterateOver: Array<any>;
   pickOut?: string;
   alignRow?: boolean;
+  onClick: () => void;
 };
 
 class Iterator extends React.Component<OwnProps> {
+
+  handleClick = () => {
+    this.props.onClick();
+  }
+
   render() {
     let printItems = [];
 
@@ -15,13 +21,19 @@ class Iterator extends React.Component<OwnProps> {
       if (this.props.pickOut) {
         console.log(this.props.pickOut)
         printItems.push(
-          <IteratorLi key={i} alignRow={this.props.alignRow}>
+          <IteratorLi 
+            key={i} 
+            alignRow={this.props.alignRow} 
+            onClick={this.handleClick}>
             {this.props.iterateOver[i][this.props.pickOut]}
           </IteratorLi>
         );
       } else {
         printItems.push(
-          <IteratorLi key={i} alignRow={this.props.alignRow}>
+          <IteratorLi 
+            key={i} 
+            alignRow={this.props.alignRow} 
+            onClick={this.handleClick}>
             {this.props.iterateOver[i]}
           </IteratorLi>
         );

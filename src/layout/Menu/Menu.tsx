@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {MenuContainer, MenuTitle} from './styled';
+import {MenuContainer} from './styled';
 import Iterator from '../../components/Iterator/Iterator';
 
 type OwnProps = {
@@ -8,14 +8,23 @@ type OwnProps = {
 };
 
 class Menu extends React.Component<OwnProps> {
-	render() {
-		if (!this.props.content) return null;
 
+	handleClick = () => {
+		console.log('click!')
+	}
+
+	render() {
+		if (
+			!this.props.content ||
+			Object.entries(this.props.content).length === 0
+		  ) {
+			return null;
+		  }
+		
 		const sections = this.props.content[0].portfolio.content.sections;
-		console.log(sections)
 		return(
 			<MenuContainer>
-				<Iterator iterateOver={sections} pickOut='title'/>
+				<Iterator iterateOver={sections} pickOut='title' onClick={this.handleClick}/>
 			</MenuContainer>
 		)
 	}

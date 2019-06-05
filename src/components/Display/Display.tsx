@@ -13,7 +13,10 @@ class Display extends React.Component<OwnProps> {
     return (
       <DisplayContainer>
         <DisplayTitle>{db.userName}</DisplayTitle>
-        <Iterator iterateOver={db.content.tags} alignRow={true} />
+        <Iterator 
+          iterateOver={db.content.tags} 
+          alignRow={true} 
+          onClick={() => {}}/>
 		{/* PLACEHOLDER BELOW */}
 		<div>{selectedWork.title}</div>
 		<div>{selectedWork.content}.</div>

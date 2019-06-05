@@ -11,9 +11,7 @@ export const MenuContainer = styled.div`
     align-items: center;
     justify-content: center;
     border-right: 1px solid white;
-`
 
-export const MenuTitle = styled.p`
     font-size: 22px;
     color: white;
 `

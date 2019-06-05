@@ -21,6 +21,7 @@ class Home extends Component<OwnProps> {
       !this.props.content ||
       Object.entries(this.props.content).length === 0
     ) {
+      this.props.getContent();
       return null;
     }
 
