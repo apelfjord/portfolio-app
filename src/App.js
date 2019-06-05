@@ -1,20 +1,20 @@
 import React from "react";
 import { Provider } from "react-redux";
 
-import { AppContainer, AppMain } from "./styled";
+import { AppContainer } from "./styled";
 import store from "./redux/store";
 import Home from "./components/Home/Home";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import Menu from "./layout/Menu/Menu";
 
 function App() {
   return (
     <Provider store={store}>
       <AppContainer>
         {/* <Header /> */}
-        <AppMain>
-          <Home />
-        </AppMain>
+        <Menu />
+        <Home />
         {/* <Footer /> */}
       </AppContainer>
     </Provider>

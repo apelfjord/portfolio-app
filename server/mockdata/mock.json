@@ -9,6 +9,12 @@
         "logoUrl": "http://lorempicsum.com",
         "sections": [
           {
+            "id": 7393356,
+            "title": "About me",
+            "content": "I want to travel the world and make art",
+            "elements": []
+          },
+          {
             "id": 2348782735,
             "title": "Albums",
             "content": "lorem ipsum dolor",
