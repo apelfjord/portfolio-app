@@ -1,18 +1,19 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const IteratorContainer = styled.div`
-    height: 100%;
-    width: 100%;
-`
+  height: 100%;
+  width: 100%;
+`;
 
 export const IteratorTitle = styled.h1`
-    color: red;
-`
+  color: red;
+`;
 
 export const IteratorUl = styled.ul`
-    list-style: none;
-`
+  list-style: none;
+`;
 
 export const IteratorLi = styled.li`
-
-`
+  display: ${props => (props.alignRow ? "inline" : "block")};
+  padding: 10px;
+`;

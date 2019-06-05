@@ -11,11 +11,11 @@ function App() {
   return (
     <Provider store={store}>
       <AppContainer>
-        <Header />
+        {/* <Header /> */}
         <AppMain>
           <Home />
         </AppMain>
-        <Footer />
+        {/* <Footer /> */}
       </AppContainer>
     </Provider>
   );

@@ -3,7 +3,7 @@ import { IteratorLi, IteratorUl } from "./styled";
 
 type OwnProps = {
   iterateOver: Array<any>;
-  times?: number;
+  alignRow?: boolean;
 };
 
 class Iterator extends React.Component<OwnProps> {
@@ -11,7 +11,7 @@ class Iterator extends React.Component<OwnProps> {
     let printItems = [];
     for (let i = 0; i < this.props.iterateOver.length; i++) {
       printItems.push(
-        <IteratorLi key={i}>{this.props.iterateOver[i]}</IteratorLi>
+        <IteratorLi key={i} alignRow={this.props.alignRow}>{this.props.iterateOver[i]}</IteratorLi>
       );
     }
 

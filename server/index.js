@@ -34,20 +34,19 @@ app.get("/mongo", (req, res, next) => {
           console.log(util.inspect(items, false, null, true));
           data = items;
         });
+      res.send({content: data});
       db.collection("data").deleteMany({});
       client.close();
     });
   });
 
-  const fetchContent = (db, cb) => {
+    const fetchContent = (db, cb) => {
     const collection = db.collection("data");
     collection.insertMany(dbPath, (err, result) => {
       console.log("Inserted data into the collection");
       cb(result);
     });
   };
-
-  res.send({content: data});
 });
 
 app.listen(PORT, () => {

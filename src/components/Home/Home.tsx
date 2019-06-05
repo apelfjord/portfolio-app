@@ -42,6 +42,17 @@ class Home extends Component<OwnProps> {
   // };
 
   render() {
+    console.log(typeof this.props.content);
+    console.log(this.props.content);
+
+    if (
+      !this.props.content ||
+      Object.entries(this.props.content).length === 0
+    ) {
+      console.log(this.props.content);
+      return null;
+    }
+
     return (
       <HomeContainer className="Home">
         <Display print={this.props.content} />

@@ -5,9 +5,9 @@ export const DisplayContainer = styled.div`
     width: 100%;
 `
 
-export const DisplayTitle = styled.div`
+export const DisplayTitle = styled.h1`
     font-weight: bold;
 `
 export const DisplayText = styled.div`
-    
+
 `
