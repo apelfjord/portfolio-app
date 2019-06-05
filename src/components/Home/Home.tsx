@@ -8,11 +8,12 @@ import {
 } from "../../redux/actions/numberActions";
 import { getContent } from "../../redux/actions/contentActions";
 import { HomeContainer } from "./styled";
-import Button from "../../common/Button/Button";
+// import Button from "../../common/Button/Button";
+import Display from "../Display/Display";
 
 type OwnProps = {
   number: number;
-  content: object,
+  content: object;
   decrease(): void;
   increase(): void;
   fetchNumber(): void;
@@ -20,35 +21,35 @@ type OwnProps = {
 };
 
 class Home extends Component<OwnProps> {
-  handleDec = () => {
-    this.props.decrease();
-  };
-
-  handleInc = () => {
-    this.props.increase();
-  };
-
-  handleFetch = () => {
-    this.props.fetchNumber();
-  };
-
-  handleDb = () => {
+  componentWillMount() {
     this.props.getContent();
-  };
+  }
+
+  // handleDec = () => {
+  //   this.props.decrease();
+  // };
+
+  // handleInc = () => {
+  //   this.props.increase();
+  // };
+
+  // handleFetch = () => {
+  //   this.props.fetchNumber();
+  // };
+
+  // handleDb = () => {
+  //   this.props.getContent();
+  // };
 
   render() {
     return (
       <HomeContainer className="Home">
-        <p>{this.props.number}</p>
+        <Display print={this.props.content} />
+        {/* <p>{this.props.number}</p>
         <Button onClick={this.handleDec} title="Decrease" />
         <Button onClick={this.handleInc} title="Increase" />
-        <p>
-          <Button onClick={this.handleFetch} title="Fetch number from server" />
-        </p>
-        <Button onClick={this.handleDb} title="Fetch db to page" />
-        <p>
-          {JSON.stringify(this.props.content)}
-        </p>
+        <Button onClick={this.handleFetch} title="Fetch number from server" />
+        <Button onClick={this.handleDb} title="Fetch db to page" /> */}
       </HomeContainer>
     );
   }
