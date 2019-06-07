@@ -1,6 +1,35 @@
 import { FETCH_DB } from "../actions/types";
 
-const initalState = [];
+const initalState = [
+    {
+      "portfolio": {
+        "userName": "",
+        "password": "",
+        "content": {
+          "title": "",
+          "tags": [""],
+          "logoUrl": "",
+          "sections": [
+            {
+              "id": 0,
+              "title": "",
+              "content": "",
+              "elements": [
+                {
+                    "id": 0,
+                    "title": "",
+                    "type": "",
+                    "URL": "",
+                    "content": ""
+                  }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+  ;
 
 export default function(state = initalState, action) {
     switch (action.type) {

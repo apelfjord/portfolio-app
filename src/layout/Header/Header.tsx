@@ -11,7 +11,8 @@ class Header extends React.Component<OwnProps> {
   render() {
     if (
       !this.props.content ||
-      Object.entries(this.props.content).length === 0
+	  Object.entries(this.props.content).length === 0 || 
+	  Object.entries(this.props.content).length === 0
     ) {
       return null;
     }

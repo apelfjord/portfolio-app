@@ -7,22 +7,17 @@ import Display from "../Display/Display";
 
 type OwnProps = {
   content: object;
-  getContent(): void;
 };
 
 class Home extends Component<OwnProps> {
-  componentWillMount() {
-    this.props.getContent();
-  }
 
   render() {
 
-    if (
-      !this.props.content ||
-      Object.entries(this.props.content).length === 0
-    ) {
-      this.props.getContent();
-      return null;
+    console.log(this.props)
+
+    if (!this.props.content || 
+    Object.entries(this.props.content).length === 0) {
+      return null
     }
 
     return (
@@ -36,7 +31,7 @@ class Home extends Component<OwnProps> {
 const mapStateToProps = (state: any) => {
   return {
     content: state.content.content
-  }  
+  };
 };
 
 export default connect(

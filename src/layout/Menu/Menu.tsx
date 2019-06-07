@@ -14,12 +14,6 @@ class Menu extends React.Component<OwnProps> {
 	}
 
 	render() {
-		if (
-			!this.props.content ||
-			Object.entries(this.props.content).length === 0
-		  ) {
-			return null;
-		  }
 		
 		const sections = this.props.content[0].portfolio.content.sections;
 		return(

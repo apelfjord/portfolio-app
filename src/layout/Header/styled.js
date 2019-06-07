@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {centerWithMenu} from '../spec'
+// import {centerWithMenu} from '../spec'
 
 export const HeaderContainer = styled.div`
     display: flex;
