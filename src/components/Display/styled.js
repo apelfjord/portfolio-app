@@ -3,6 +3,7 @@ import {centerWithMenu} from '../../layout/spec'
 
 export const DisplayContainer = styled.div`
     height: 100%;
+    margin: 40px;
     padding-right: ${centerWithMenu}px;
     display: flex;
     justify-content: center;

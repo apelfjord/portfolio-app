@@ -1,23 +1,23 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {FooterContainer, FooterTitle} from './styled';
+import {FooterContainer, FooterText} from './styled';
 
 type OwnProps = {
-	content: object,
+	content: any,
 };
 
 class Footer extends React.Component<OwnProps> {
 	render() {
 		return(
 			<FooterContainer>
-				<FooterTitle>Footer</FooterTitle>
+				<FooterText>Copyright © 2019 by {this.props.content[0].portfolio.userName}</FooterText>
 			</FooterContainer>
 		)
 	}
 }
 
 const mapStateToProps = (state: any) => {
-	return {content: state.content.content}
+	return {content: state.content}
 }
 
 export default connect(mapStateToProps, {})(Footer);

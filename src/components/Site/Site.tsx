@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { SiteContainer, SiteSubContainer } from "./styled";
 
 import { getContent } from "../../redux/actions/contentActions";
+import { selectToDisplay } from '../../redux/actions/displayerActions';
 import Home from "../../components/Home/Home";
 import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
@@ -10,7 +11,9 @@ import Menu from "../../layout/Menu/Menu";
 
 type OwnProps = {
   content: object;
+  selector: string,
   getContent: () => void;
+  selectToDisplay: () => void;
 };
 
 class Site extends React.Component<OwnProps> {
@@ -19,8 +22,11 @@ class Site extends React.Component<OwnProps> {
   }
 
   render() {
-	if (!this.props.content || 
-		Object.entries(this.props.content).length === 0) {
+    console.log(this.props)
+    if (
+      !this.props.content ||
+      Object.entries(this.props.content).length === 0
+    ) {
       this.props.getContent();
       return null;
     }
@@ -39,10 +45,13 @@ class Site extends React.Component<OwnProps> {
 }
 
 const mapStateToProps = (state: any) => {
-  return { content: state.content.content };
+  return { 
+    selector: state.selector,
+    content: state.content
+  };
 };
 
 export default connect(
   mapStateToProps,
-  { getContent }
+  { getContent, selectToDisplay }
 )(Site);

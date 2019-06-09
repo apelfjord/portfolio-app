@@ -12,9 +12,6 @@ type OwnProps = {
 class Home extends Component<OwnProps> {
 
   render() {
-
-    console.log(this.props)
-
     if (!this.props.content || 
     Object.entries(this.props.content).length === 0) {
       return null
@@ -30,7 +27,7 @@ class Home extends Component<OwnProps> {
 
 const mapStateToProps = (state: any) => {
   return {
-    content: state.content.content
+    content: state.content
   };
 };
 

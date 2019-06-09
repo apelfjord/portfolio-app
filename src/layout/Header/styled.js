@@ -15,4 +15,5 @@ export const HeaderContainer = styled.div`
 
 export const HeaderTitle = styled.h1`
     font-weight: bold;
+    font-size: 2.75rem;
 `

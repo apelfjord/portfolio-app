@@ -1,24 +1,30 @@
 import React from "react";
+import {connect} from 'react-redux';
+
 import { DisplayContainer, DisplayTitle, DisplayText } from "./styled";
-// import Iterator from "../Iterator/Iterator";
 
 type OwnProps = {
   print?: any;
+  selector: number,
 };
 
 class Display extends React.Component<OwnProps> {
   render() {
-
+    if (!this.props.selector) return null
+    console.log(this.props.selector);
   const db = this.props.print[0].portfolio;
-	const selectedWork = db.content.sections[2].elements[0];
+	const section = db.content.sections[this.props.selector];
     return (
       <DisplayContainer>
-      {/* PLACEHOLDER BELOW */}
-        <DisplayTitle>{selectedWork.title}</DisplayTitle>
-        <DisplayText>{selectedWork.content}</DisplayText>
+        <DisplayTitle>{section.title}</DisplayTitle>
+        <DisplayText>{section.content}</DisplayText>
       </DisplayContainer>
     );
   }
 }
 
-export default Display;
+const mapStateToProps = (state: any) => {
+  return {content: state.content, selector: state.selector};
+}
+
+export default connect(mapStateToProps)(Display);

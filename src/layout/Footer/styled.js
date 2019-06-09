@@ -9,6 +9,7 @@ export const FooterContainer = styled.div`
   border-top: 1px solid white;
 `;
 
-export const FooterTitle = styled.h1`
-  color: red;
+export const FooterText = styled.div`
+  color: #ffffff;
+  margin: 40px;
 `;
