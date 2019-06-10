@@ -25,7 +25,7 @@ app.get("/mongo", (req, res, next) => {
 
     // TODO: This endpoint is copying the data from a file and then deletes
     //       the same data instantly. Before deployment, make sure the strip 
-    //       this function from all creating/deleting-actions before deployment
+    //       this function from all creating/deleting-actions
 
     fetchContent(db, () => {
       db.collection("data")
@@ -48,6 +48,10 @@ app.get("/mongo", (req, res, next) => {
     });
   };
 });
+
+app.get('/admin', (req, res, next) => {
+    res.send({login: false})
+})
 
 app.listen(PORT, () => {
   console.log("Server is running on port " + PORT);
