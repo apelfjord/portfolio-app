@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {centerWithMenu} from '../spec'
+import {centerWithMenu, logoHeight} from '../spec'
 
 export const MenuContainer = styled.div`
     min-width: ${centerWithMenu}px;
@@ -10,8 +10,9 @@ export const MenuContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid white;
-
     font-size: 22px;
     color: white;
+    position: fixed;
+    top: ${logoHeight}px;
+    z-index: 10;
 `

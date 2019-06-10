@@ -34,18 +34,39 @@
             "content": "lorem ipsum dolor",
             "elements": [
               {
-                "id": 658595,
-                "title": "Me posing with an ostrich",
+                "id": 65859545,
+                "title": "Random art by me",
                 "type": "image",
-                "URL": "http://lorempicsum.com",
+                "URL": "https://picsum.photos/400/280?random=1",
                 "content": "From my dark period"
               },
               {
                 "id": 75500678,
-                "title": "Me getting married to the same ostrich",
+                "title": "More random art",
                 "type": "image",
-                "URL": "http://lorempicsum.com",
+                "URL": "https://picsum.photos/400/280?random=2",
                 "content": "From my darker period"
+              },
+              {
+                "id": 2352377,
+                "title": "This is one of my favourites",
+                "type": "image",
+                "URL": "https://picsum.photos/400/280?random=3",
+                "content": "Can be ordered as canvas"
+              },
+              {
+                "id": 23567246,
+                "title": "Look at this beautiful lightning",
+                "type": "image",
+                "URL": "https://picsum.photos/400/280?random=4",
+                "content": "Intense, right?"
+              },
+              {
+                "id": 323667653,
+                "title": "Saved the best for last",
+                "type": "image",
+                "URL": "https://picsum.photos/400/280?random=5",
+                "content": "It doesn't get better than this"
               }
             ]
           }

@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { getContent } from "../../redux/actions/contentActions";
 import { HomeContainer } from "./styled";
 import Display from "../Display/Display";
-import TestComponent from "../TestComponent/TestComponent";
+import Gallery from "../Gallery/Gallery";
 
 type OwnProps = {
   content: object;
@@ -20,7 +20,7 @@ class Home extends Component<OwnProps> {
 
     return (
       <HomeContainer className="Home">
-        <TestComponent/>
+        <Gallery/>
         <Display print={this.props.content} />
       </HomeContainer>
     );

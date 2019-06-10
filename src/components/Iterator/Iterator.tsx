@@ -15,7 +15,6 @@ class Iterator extends React.Component<OwnProps> {
   }
 
   render() {
-    console.log(this.props.alignRow)
     let printItems = [];
 
     for (let i = 0; i < this.props.iterateOver.length; i++) {
@@ -25,7 +24,9 @@ class Iterator extends React.Component<OwnProps> {
             key={i} 
             align={this.props.alignRow || false} 
             onClick={() => this.handleClick(i)}>
-            {this.props.iterateOver[i][this.props.pickOut]}
+              {this.props.iterateOver[i].type === 'image' ? 
+                (<div style={{'marginBottom': 75 }}><img src={this.props.iterateOver[i][this.props.pickOut]}/> <p>{this.props.iterateOver[i].title}</p></div>) : 
+                (this.props.iterateOver[i][this.props.pickOut])}
           </IteratorLi>
         );
       } else {
