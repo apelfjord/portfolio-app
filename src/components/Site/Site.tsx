@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { SiteContainer, SiteSubContainer } from "./styled";
+import { SiteContainer, SiteSubContainer } from './styled';
 
 import { getContent } from "../../redux/actions/contentActions";
 import { selectToDisplay } from '../../redux/actions/displayerActions';

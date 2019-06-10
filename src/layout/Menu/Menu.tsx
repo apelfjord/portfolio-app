@@ -23,7 +23,8 @@ class Menu extends React.Component<OwnProps> {
 		return(
 			<MenuContainer>
 				<Iterator 
-					iterateOver={sections} 
+					iterateOver={sections}
+					alignRow={false} 
 					pickOut='title' 
 					onClick={this.handleClick}/>
 			</MenuContainer>
