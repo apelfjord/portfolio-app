@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import {
   PhotoCardContainer, 
   PhotoCardTitle, 
-  PhotoCardText
+  PhotoCardText,
+  PhotoCardImage
 } from './styled';
 
 type OwnProps = {
@@ -13,8 +14,10 @@ type OwnProps = {
 
 class PhotoCard extends Component<OwnProps> {
   render() {  
+    const photo = this.props.content[0].portfolio.content.sections[2].elements[0].URL;
     return (
       <PhotoCardContainer>
+        <PhotoCardImage src={photo}/>
         <PhotoCardTitle>PhotoCard</PhotoCardTitle>
         <PhotoCardText>Lorem ipsum dolor</PhotoCardText>
       </PhotoCardContainer>

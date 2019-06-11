@@ -36,9 +36,9 @@ class Site extends React.Component<OwnProps> {
       <SiteContainer>
         <Header />
         <SiteSubContainer>
-          <Menu />
-          {/* <TestNewComponent/> */}
-          <Home />
+          {/* <Menu /> */}
+          <TestNewComponent/>
+          {/* <Home /> */}
         </SiteSubContainer>
         <Footer />
       </SiteContainer>

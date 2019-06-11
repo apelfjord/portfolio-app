@@ -1,17 +1,28 @@
 import styled from 'styled-components'
+import {thumbnailProperties} from '../../layout/spec'
 
 export const PhotoCardContainer = styled.div`
-    height: 100%;
-	width: 100%;
+	margin: 25px;
+	padding: 25px;
+	width: ${thumbnailProperties.width}px;
+	border: 1px solid white;
+	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    align-items: center;
+	align-items: center;
 `
-export const PhotoCardTitle = styled.h1`
+export const PhotoCardTitle = styled.h2`
     font-weight: bold;
-	color: red;
+	font-size: 2rem;
 `
 export const PhotoCardText = styled.div`
-	color: red;
+	font-size: 1rem;
+`
+export const PhotoCardImage = styled.img`
+	border: 1px solid white;
+	border-radius: 5px;
+	width: ${thumbnailProperties.width}px;
+	height: ${thumbnailProperties.height}px;
+
 `
