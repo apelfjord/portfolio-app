@@ -8,6 +8,7 @@ import Home from "../../components/Home/Home";
 import Header from "../../layout/Header/Header";
 import Footer from "../../layout/Footer/Footer";
 import Menu from "../../layout/Menu/Menu";
+import TestNewComponent from "components/TestNewComponent/TestNewComponent";
 
 type OwnProps = {
   content: object;
@@ -36,6 +37,7 @@ class Site extends React.Component<OwnProps> {
         <Header />
         <SiteSubContainer>
           <Menu />
+          {/* <TestNewComponent/> */}
           <Home />
         </SiteSubContainer>
         <Footer />

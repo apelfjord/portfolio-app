@@ -4,7 +4,7 @@ import {centerWithMenu} from '../../layout/spec'
 
 export const GalleryContainer = styled.div`
 	width: 100%;
-	padding-right: ${centerWithMenu}px;
+	min-height: 100vh - 175px;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
