@@ -1,5 +1,6 @@
 import React from "react";
 import { IteratorLi, IteratorUl } from './styled';
+import PhotoCard from "components/PhotoCard/PhotoCard";
 
 type OwnProps = {
   iterateOver: Array<any>,
@@ -25,7 +26,7 @@ class Iterator extends React.Component<OwnProps> {
             align={this.props.alignRow || false} 
             onClick={() => this.handleClick(i)}>
               {this.props.iterateOver[i].type === 'image' ? 
-                (<div style={{'marginBottom': 75 }}><img src={this.props.iterateOver[i][this.props.pickOut]}/> <p><b>{this.props.iterateOver[i].title}</b></p><p>{this.props.iterateOver[i].content}</p></div>) : 
+                (<PhotoCard element={this.props.iterateOver[i]}/>) : 
                 (this.props.iterateOver[i][this.props.pickOut])}
           </IteratorLi>
         );

@@ -10,16 +10,17 @@ import {
 
 type OwnProps = {
   content: any;
+  element: any,
 };
 
 class PhotoCard extends Component<OwnProps> {
   render() {  
-    const photo = this.props.content[0].portfolio.content.sections[2].elements[0].URL;
+    const element = this.props.element;
     return (
       <PhotoCardContainer>
-        <PhotoCardImage src={photo}/>
-        <PhotoCardTitle>PhotoCard</PhotoCardTitle>
-        <PhotoCardText>Lorem ipsum dolor</PhotoCardText>
+        <PhotoCardImage src={element.URL}/>
+        <PhotoCardTitle>{element.title}</PhotoCardTitle>
+        <PhotoCardText>{element.content}</PhotoCardText>
       </PhotoCardContainer>
     );
   }

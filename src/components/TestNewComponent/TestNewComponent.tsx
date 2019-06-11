@@ -14,7 +14,7 @@ class TestNewComponent extends Component<OwnProps> {
   render() {  
     return (
       <TestNewComponentContainer>
-        <PhotoCard/>
+        <PhotoCard element={[]}/>
       </TestNewComponentContainer>
     );
   }
