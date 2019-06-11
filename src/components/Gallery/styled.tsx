@@ -12,8 +12,8 @@ export const GalleryContainer = styled.div`
 `
 export const GalleryTitle = styled.h1`
     font-weight: bold;
-	color: red;
+
 `
 export const GalleryText = styled.div`
-	color: red;
+
 `

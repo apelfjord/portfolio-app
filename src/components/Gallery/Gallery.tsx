@@ -10,18 +10,19 @@ import Iterator from '../Iterator/Iterator';
 
 type OwnProps = {
   content: any;
+  display: any,
 };
 
 class Gallery extends Component<OwnProps> {
   render() {  
-    const hardData = this.props.content[0].portfolio.content.sections[2].elements;
+    const data = this.props.display;
     return (
       <GalleryContainer>
-        <GalleryTitle>Gallery</GalleryTitle>
-        <GalleryText>Lorem ipsum dolor</GalleryText>
+        <GalleryTitle>{data.title}</GalleryTitle>
+        <GalleryText>{data.content}</GalleryText>
         <Iterator
           alignRow={false}
-          iterateOver={hardData}
+          iterateOver={data.elements}
           onClick={() => {}}
           pickOut='URL'
           />

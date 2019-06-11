@@ -25,7 +25,7 @@ class Iterator extends React.Component<OwnProps> {
             align={this.props.alignRow || false} 
             onClick={() => this.handleClick(i)}>
               {this.props.iterateOver[i].type === 'image' ? 
-                (<div style={{'marginBottom': 75 }}><img src={this.props.iterateOver[i][this.props.pickOut]}/> <p>{this.props.iterateOver[i].title}</p></div>) : 
+                (<div style={{'marginBottom': 75 }}><img src={this.props.iterateOver[i][this.props.pickOut]}/> <p><b>{this.props.iterateOver[i].title}</b></p><p>{this.props.iterateOver[i].content}</p></div>) : 
                 (this.props.iterateOver[i][this.props.pickOut])}
           </IteratorLi>
         );
