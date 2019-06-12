@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import {logoHeight} from '../spec'
+import {
+    logoHeight,
+    theme
+} from '../spec'
 
 export const HeaderContainer = styled.div`
     display: flex;
@@ -8,9 +11,8 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     height: ${logoHeight}px;
     width: 100%;
-    background-color: #282c34;
-    color: white;
     z-index: 20;
+    background-color: ${theme.highlight}
 `
 
 export const HeaderTitle = styled.h1`

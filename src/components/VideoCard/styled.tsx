@@ -3,14 +3,16 @@ import {
 	thumbnailProperties,
 	standardMargin, 
 	standardPadding,
-	textSizes
+	textSizes,
+	theme
 } from '../../layout/spec'
 
 export const VideoCardContainer = styled.div`
 	margin: ${standardMargin}px;
 	padding: ${standardPadding}px;
 	width: ${thumbnailProperties.width}px;
-	border: 1px solid white;
+	background-color: ${theme.card};
+	border: 1px solid ${theme.border};
 	border-radius: 10px;
     height: auto;
 	display: flex;

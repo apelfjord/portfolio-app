@@ -4,13 +4,15 @@ import {
 	standardMargin,
 	standardPadding,
 	textSizes,
+	theme
 } from '../../layout/spec'
 
 export const PhotoCardContainer = styled.div`
 	margin: ${standardMargin}px;
 	padding: ${standardPadding}px;
+	background-color: ${theme.card};
 	width: ${thumbnailProperties.width}px;
-	border: 1px solid white;
+	border: 1px solid ${theme.border};
 	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
@@ -25,7 +27,7 @@ export const PhotoCardText = styled.div`
 font-size: ${textSizes.text};
 `
 export const PhotoCardImage = styled.img`
-	border: 1px solid white;
+	border: 1px solid ${theme.border};
 	border-radius: 5px;
 	width: ${thumbnailProperties.width}px;
 	height: ${thumbnailProperties.height}px;
