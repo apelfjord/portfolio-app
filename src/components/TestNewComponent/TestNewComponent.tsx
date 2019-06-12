@@ -5,6 +5,7 @@ import {
   TestNewComponentContainer, 
 } from './styled';
 import PhotoCard from 'components/PhotoCard/PhotoCard';
+import VideoCard from 'components/VideoCard/VideoCard';
 
 type OwnProps = {
   content: any;
@@ -14,7 +15,7 @@ class TestNewComponent extends Component<OwnProps> {
   render() {  
     return (
       <TestNewComponentContainer>
-        <PhotoCard element={[]}/>
+        <VideoCard element={[]}/>
       </TestNewComponentContainer>
     );
   }

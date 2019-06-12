@@ -69,6 +69,27 @@
                 "content": "It doesn't get better than this"
               }
             ]
+          },
+          {
+            "id": 34673588,
+            "title": "Videos",
+            "content": "lorem ipsum dolor",
+            "elements": [
+              {
+                "id": 214135676,
+                "title": "This is a little something i made",
+                "type": "video",
+                "URL": "https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
+                "content": "Don't be afraid to give me positive feedback"
+              },
+              {
+                "id": 4624672,
+                "title": "This is just as good as the last one",
+                "type": "video",
+                "URL": "https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
+                "content": "Spoiler: it's exactly the same"
+              }
+            ]
           }
         ]
       }
