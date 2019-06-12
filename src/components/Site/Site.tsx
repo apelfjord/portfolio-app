@@ -47,7 +47,7 @@ class Site extends React.Component<OwnProps> {
 }
 
 const mapStateToProps = (state: any) => {
-  return { 
+  return {
     selector: state.selector,
     content: state.content
   };

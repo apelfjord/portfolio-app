@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import {
-  GalleryContainer, 
-  GalleryTitle, 
+  GalleryContainer,
+  GalleryTitle,
   GalleryText
 } from './styled';
 import Iterator from '../Iterator/Iterator';
@@ -14,7 +14,7 @@ type OwnProps = {
 };
 
 class Gallery extends Component<OwnProps> {
-  render() {  
+  render() {
     const data = this.props.display;
     return (
       <GalleryContainer>
@@ -23,9 +23,9 @@ class Gallery extends Component<OwnProps> {
         <Iterator
           alignRow={false}
           iterateOver={data.elements}
-          onClick={() => {}}
+          onClick={() => { }}
           pickOut='URL'
-          />
+        />
       </GalleryContainer>
     );
   }

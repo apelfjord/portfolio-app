@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-import {centerWithMenu} from '../../layout/spec'
+import {
+	textSizes
+} from '../../layout/spec'
 
 export const GalleryContainer = styled.div`
 	width: 100%;
@@ -11,9 +13,10 @@ export const GalleryContainer = styled.div`
 	align-items: center;
 `
 export const GalleryTitle = styled.h1`
+	font-size: ${textSizes.title}
     font-weight: bold;
 
 `
 export const GalleryText = styled.div`
-
+	font-size: ${textSizes.text}
 `

@@ -16,14 +16,15 @@ type OwnProps = {
 class VideoCard extends Component<OwnProps> {
   render() {
     const element = this.props.element;
-    const videoPath = 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4';
     return (
       <VideoCardContainer>
         <VideoCardFile controls>
-          <source src={videoPath} type='video/mp4'></source>
+          <source
+            src={element.URL}
+            type='video/mp4' />
         </VideoCardFile>
-        <VideoCardTitle>VideoCard</VideoCardTitle>
-        <VideoCardText>Lorem ipsum dolor</VideoCardText>
+        <VideoCardTitle>{element.title}</VideoCardTitle>
+        <VideoCardText>{element.content}</VideoCardText>
       </VideoCardContainer>
     );
   }

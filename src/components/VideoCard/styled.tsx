@@ -26,6 +26,5 @@ export const VideoCardText = styled.div`
 	font-size: ${textSizes.text};
 `
 export const VideoCardFile = styled.video`
-	border: 1px solid white;
 	max-width: 100%;
 `
