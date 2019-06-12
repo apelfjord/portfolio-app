@@ -1,6 +1,7 @@
-export const centerWithMenu = 200;
 export const logoHeight = 175;
 export const footerHeight = 175;
+
+export const menuWidth = 200;
 
 export const thumbnailProperties = {
     height: 280,
@@ -44,6 +45,13 @@ const colorTheme = {
         highlight: '#A44A3F',
         card: '#9CB380',
     },
+    neutral: {
+        background: '#fffFfc',
+        card: '#e5e5e5',
+        border: '#c1c1c1',
+        highlight: '#eaeaea',
+        text: '#000000'
+    },
     template: {
         background: '#',
         card: '#',
@@ -53,4 +61,4 @@ const colorTheme = {
     }
 }
 
-export const theme = colorTheme.summer;
+export const theme = colorTheme.neutral;

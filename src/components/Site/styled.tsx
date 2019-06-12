@@ -10,6 +10,7 @@ export const SiteContainer = styled.div`
   color: ${theme.text}
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   `;
 
 export const SiteSubContainer = styled.div`

@@ -10,6 +10,7 @@ export const FooterContainer = styled.div`
   height: ${footerHeight}px;
   width: 100%;
   border-top: 1px solid ${theme.border};
+  background-color: ${theme.highlight};
 `;
 
 export const FooterText = styled.div`

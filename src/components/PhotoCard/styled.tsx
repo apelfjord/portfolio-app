@@ -22,9 +22,11 @@ export const PhotoCardContainer = styled.div`
 export const PhotoCardTitle = styled.h2`
     font-weight: bold;
 	font-size:${textSizes.title};
+	padding-bottom: 0px;
 `
 export const PhotoCardText = styled.div`
-font-size: ${textSizes.text};
+	padding-top: ${standardPadding/2.5}px;
+	font-size: ${textSizes.text};
 `
 export const PhotoCardImage = styled.img`
 	border: 1px solid ${theme.border};

@@ -4,7 +4,7 @@
       "userName": "John Doe",
       "password": "childrensName",
       "content": {
-        "title": "My Page",
+        "title": "My Portfolio",
         "tags": ["Producer", "Artist", "Photographer", "Traveler"],
         "logoUrl": "http://lorempicsum.com",
         "sections": [
@@ -12,7 +12,15 @@
             "id": 7393356,
             "title": "About me",
             "content": "I want to travel the world and make art",
-            "elements": []
+            "elements": [
+              {
+                "id": 3463478,
+                "title": "",
+                "type": "image",
+                "URL": "https://picsum.photos/400/280?random=10",
+                "content": ""
+              }
+            ]
           },
           {
             "id": 2348782735,

@@ -19,8 +19,8 @@ class PhotoCard extends Component<OwnProps> {
     return (
       <PhotoCardContainer>
         <PhotoCardImage src={element.URL}/>
-        <PhotoCardTitle>{element.title}</PhotoCardTitle>
-        <PhotoCardText>{element.content}</PhotoCardText>
+        {element.title ? <PhotoCardTitle>{element.title}</PhotoCardTitle> : null}
+        {element.content ? <PhotoCardText>{element.content}</PhotoCardText> : null}
       </PhotoCardContainer>
     );
   }

@@ -23,9 +23,11 @@ export const VideoCardContainer = styled.div`
 export const VideoCardTitle = styled.h1`
 	font-weight: bold;	
 	font-size:${textSizes.title};
+	padding-bottom: 0px;
 `
 export const VideoCardText = styled.div`
 	font-size: ${textSizes.text};
+	padding-top: ${standardPadding/2.5}px;
 `
 export const VideoCardFile = styled.video`
 	max-width: 100%;

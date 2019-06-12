@@ -13,6 +13,7 @@ export const HeaderContainer = styled.div`
     width: 100%;
     z-index: 20;
     background-color: ${theme.highlight}
+    border: 1px solid ${theme.border};
 `
 
 export const HeaderTitle = styled.h1`

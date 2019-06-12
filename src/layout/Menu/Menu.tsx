@@ -1,8 +1,8 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
-import {selectToDisplay} from '../../redux/actions/displayerActions';
-import {MenuContainer} from './styled';
+import { selectToDisplay } from '../../redux/actions/displayerActions';
+import { MenuContainer } from './styled';
 import Iterator from '../../components/Iterator/Iterator';
 
 type OwnProps = {
@@ -18,15 +18,16 @@ class Menu extends React.Component<OwnProps> {
 		this.props.selectToDisplay(key);
 	}
 
-	render() {		
+	render() {
 		const sections = this.props.content[0].portfolio.content.sections;
-		return(
+		return (
 			<MenuContainer>
-				<Iterator 
+				<Iterator
 					iterateOver={sections}
-					alignRow={false} 
-					pickOut='title' 
-					onClick={this.handleClick}/>
+					alignRow={false}
+					pickOut='title'
+					onClick={this.handleClick}
+				/>
 			</MenuContainer>
 		)
 	}
@@ -39,4 +40,4 @@ const mapStateToProps = (state: any) => {
 	}
 }
 
-export default connect(mapStateToProps, {selectToDisplay})(Menu);
+export default connect(mapStateToProps, { selectToDisplay })(Menu);
