@@ -16,8 +16,10 @@ type OwnProps = {
 class PhotoCard extends Component<OwnProps> {
   render() {  
     const element = this.props.element;
+    const slim = !element.title && !element.content ? true : false;
+
     return (
-      <PhotoCardContainer>
+      <PhotoCardContainer border={slim}>
         <PhotoCardImage src={element.URL}/>
         {element.title ? <PhotoCardTitle>{element.title}</PhotoCardTitle> : null}
         {element.content ? <PhotoCardText>{element.content}</PhotoCardText> : null}

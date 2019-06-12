@@ -7,9 +7,12 @@ import {
 	theme
 } from '../../layout/spec'
 
-export const PhotoCardContainer = styled.div`
-	margin: ${standardMargin}px;
-	padding: ${standardPadding}px;
+type OwnProps = {
+	border: boolean,
+}
+export const PhotoCardContainer = styled.div<OwnProps>`
+	padding: ${props => (props.border ? standardPadding/5 : standardPadding) }px;
+	margin: ${standardPadding}px;
 	background-color: ${theme.card};
 	width: ${thumbnailProperties.width}px;
 	border: 1px solid ${theme.border};
