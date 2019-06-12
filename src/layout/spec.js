@@ -10,6 +10,8 @@ export const thumbnailProperties = {
 
 export const standardMargin = 25;
 export const standardPadding = 25;
+export const airyPadding = 5;
+export const airyMargin = 5;
 
 export const textSizes = {
     title: '2rem',
