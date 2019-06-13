@@ -18,7 +18,8 @@ export const VideoCardContainer = styled.div`
 	display: flex;
 	flex-direction: column;
     justify-content: center;
-    align-items: center;
+	align-items: center;
+	box-shadow: 2.5px 2.5px 5px gray;
 `
 export const VideoCardTitle = styled.h1`
 	font-weight: bold;	

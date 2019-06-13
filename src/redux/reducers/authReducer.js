@@ -1,12 +1,12 @@
-import { FETCH_DB } from "../actions/types";
+import { AUTHENTICATION } from '../actions/types';
 
-const initialState = {};
+const initialState = false;
 
 export default function(state = initialState, action) {
     switch (action.type) {
-        case FETCH_DB:
+        case AUTHENTICATION:
             return action.payload;
-        default: 
+        default:
             return state;
     }
 }

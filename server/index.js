@@ -50,7 +50,7 @@ app.get("/mongo", (req, res, next) => {
 });
 
 app.get('/admin', (req, res, next) => {
-    res.send({login: false})
+    res.send({authenticated: true})
 })
 
 app.listen(PORT, () => {

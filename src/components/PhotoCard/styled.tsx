@@ -21,6 +21,7 @@ export const PhotoCardContainer = styled.div<OwnProps>`
 	flex-direction: column;
     justify-content: center;
 	align-items: center;
+	box-shadow: 2.5px 2.5px 5px gray;
 `
 export const PhotoCardTitle = styled.h2`
     font-weight: bold;
